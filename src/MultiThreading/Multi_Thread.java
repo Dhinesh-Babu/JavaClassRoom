@@ -12,12 +12,13 @@ public class Multi_Thread extends Thread {
         System.out.println("Thread Delay : "+delay+"\n");
     }
 
+    @Override
 
     public void run() {
         System.out.println("Thread Started : "+getName());
-        for(int i = 0; i<10000; i++) {
-            //System.out.println(i);
-            if( i%1000 == 0 ){
+        //System.out.println(i);
+        for(int i = 0; i<10000; i++)
+            if (i % 1000 == 0) {
                 /*
                 The following code Puts Sleep Which Causes both the threads to Synchronise.
                 */
@@ -27,8 +28,7 @@ public class Multi_Thread extends Thread {
                     e.printStackTrace();
                 }
 
-                System.out.println("1000 Records Passed in Thread ID"+Thread.currentThread().getId()+" Count: "+i);
+                System.out.println("1000 Records Passed in Thread ID" + Thread.currentThread().getId() + " Count: " + i);
             }
-        }
     }
 }
