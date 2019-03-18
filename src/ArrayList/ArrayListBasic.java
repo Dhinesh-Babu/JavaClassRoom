@@ -1,8 +1,6 @@
 package ArrayList;
-
 import java.util.ArrayList;
 import java.util.Iterator;
-
 public class ArrayListBasic {
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
@@ -10,9 +8,7 @@ public class ArrayListBasic {
         arrayList.add(2);
         arrayList.add(3);
         arrayList.add(4);
-        for (Integer i : arrayList) {
-            System.out.println(i);
-        }
+        arrayList.add(5);
         Iterator<Integer> i = arrayList.iterator();
         while ( i.hasNext() ) {
             System.out.println(i.next().intValue());
